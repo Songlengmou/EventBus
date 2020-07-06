@@ -1,10 +1,12 @@
-package com.example.eventbus;
+package com.example.eventbus.one;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.eventbus.R;
 
 /**
  * @author Administrator

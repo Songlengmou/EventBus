@@ -1,20 +1,22 @@
-package com.example.eventbus;
+package com.example.eventbus.one;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 
+import com.example.eventbus.R;
+
 import rx.Observable;
-import rx.functions.Action1;
 
 /**
  * @author Administrator
  * desc:使用RxJava和RxAndroid封装RxBus，实现EventBus功能
  * https://blog.csdn.net/qq_33689414/article/details/51586250
+ * <p>
+ * 第一种方法
  */
 public class MainActivity extends AppCompatActivity {
     private Observable<String> zhang;
