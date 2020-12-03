@@ -66,7 +66,7 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
     public void onMoonEvent(EventBusMessageBean messageEvent) {
         if (EventBusMessageBean.TEST_TYPE == EventBusMessageBean.TEST_TYPE) {
             String date = (String) messageEvent.date;
-            Log.e("TAG_shou", date);
+            Log.e("TAG_Receive", date);
         }
     }
 }

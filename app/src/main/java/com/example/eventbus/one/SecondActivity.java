@@ -27,7 +27,7 @@ public class SecondActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         super.run();
-                        RxBus.get().post("zhang", "传递数据++++++");
+                        RxBus.get().post("data", "传递数据++++++");
                     }
                 }.start();
             }

@@ -10,7 +10,7 @@
         android:id="@+id/btn_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="第一种方法"
+        android:text="第一种"
         android:textColor="#000"
         android:textSize="15sp" />
 
@@ -18,7 +18,7 @@
         android:id="@+id/btn_two"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="第二种方法"
+        android:text="第二种"
         android:textColor="#000"
         android:textSize="15sp" />
 </LinearLayout>

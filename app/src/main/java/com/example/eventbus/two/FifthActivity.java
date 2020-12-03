@@ -21,10 +21,8 @@ public class FifthActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fifth);
-
         //注册
         EventBus.getDefault().register(this);
-
         findViewById(R.id.btn_in).setOnClickListener(view -> {
             EventBus.getDefault().post("我发射了");
         });
@@ -32,8 +30,6 @@ public class FifthActivity extends AppCompatActivity {
 
     /**
      * 自定义一个方法
-     *
-     * @param event
      */
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void hello(String event) {

@@ -19,7 +19,7 @@ import rx.Observable;
  * 第一种方法
  */
 public class MainActivity extends AppCompatActivity {
-    private Observable<String> zhang;
+    private Observable<String> observable;
     private Button btn;
 
     @Override
@@ -28,15 +28,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btn = findViewById(R.id.btn);
-
         btn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, SecondActivity.class)));
-        zhang = RxBus.get().register("zhang", String.class);
-        zhang.subscribe(s -> Log.e("zhang", "+++++++++++++++++++++++++++++++" + s));
+        observable = RxBus.get().register("data", String.class);
+        observable.subscribe(smg -> Log.e("data", "+++++++++++++++++++++++++++++++" + smg));
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        RxBus.get().unregister("zhang", zhang);
+        RxBus.get().unregister("data", observable);
     }
 }

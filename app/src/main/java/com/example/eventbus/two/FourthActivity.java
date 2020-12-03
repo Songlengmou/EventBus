@@ -18,12 +18,10 @@ public class FourthActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fourth);
 
         tv = findViewById(R.id.tv_four);
-
         tv.setOnClickListener(view -> {
             EventBusMessageBean msg = new EventBusMessageBean(EventBusMessageBean.TEST_TYPE, "yp8023zl");
             EventBus.getDefault().post(msg);
