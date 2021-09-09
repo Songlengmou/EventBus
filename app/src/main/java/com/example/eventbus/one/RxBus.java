@@ -11,7 +11,7 @@ import rx.subjects.PublishSubject;
 import rx.subjects.Subject;
 
 public class RxBus {
-    private HashMap<Object, List<Subject>> maps = new HashMap<>();
+    private final HashMap<Object, List<Subject>> maps = new HashMap<>();
     private static RxBus instance;
 
     private RxBus() {

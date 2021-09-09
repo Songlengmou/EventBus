@@ -1,5 +1,6 @@
 package com.example.eventbus.two;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,18 +21,15 @@ import org.greenrobot.eventbus.ThreadMode;
  * @author Administrator
  */
 public class ThirdActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button mBtnIn;
-    private Button mBtnOne;
-    private Button mBtnTwo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
 
-        mBtnIn = findViewById(R.id.btn_in);
-        mBtnOne = findViewById(R.id.btn_one);
-        mBtnTwo = findViewById(R.id.btn_two);
+        Button mBtnIn = findViewById(R.id.btn_in);
+        Button mBtnOne = findViewById(R.id.btn_one);
+        Button mBtnTwo = findViewById(R.id.btn_two);
         mBtnIn.setOnClickListener(this);
         mBtnOne.setOnClickListener(this);
         mBtnTwo.setOnClickListener(this);
@@ -39,6 +37,7 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
         EventBus.getDefault().register(this);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
